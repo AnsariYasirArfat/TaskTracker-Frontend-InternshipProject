@@ -1,19 +1,20 @@
 import React, { useState } from "react";
+import "../CSS/TodoItem.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Collapse from "react-bootstrap/Collapse";
-import "../CSS/TodoItem.css";
 
 const Todoitem = ({
   todo,
   onDelete,
   onEdit,
   onChecked,
-  DescriptionState,
   HoveredOnBox,
+  DescriptionState,
 }) => {
   const [editing, setEditing] = useState(false);
   let todoItem;
+
   const MouseEnterBox = () => {
     HoveredOnBox(true);
   };
@@ -22,12 +23,14 @@ const Todoitem = ({
     HoveredOnBox(false);
   };
 
+  // Alert after Editting task
   const onSave = () => {
     setEditing(false);
     toast.info("Task Updated!", {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
+
   // Alert after completing task
   const checkedBox = () => {
     if (todo.done === false) {
@@ -41,6 +44,7 @@ const Todoitem = ({
     }
   };
 
+  // For condition Editting Todos
   if (editing) {
     todoItem = (
       <>
@@ -49,7 +53,7 @@ const Todoitem = ({
           onMouseDown={MouseLeaveBox}
           className="m-4 editBox taskBox taskBoxHeight uncheckedTaskBox "
         >
-          <div className=" mx-4 d-flex justify-content-between align-items-center">
+          <div className=" mx-4 my-1 d-flex justify-content-between align-items-center">
             <h5 className="m-0 saveHeading" style={{ color: "#0d6caf" }}>
               Edit Your Task:
             </h5>
@@ -61,15 +65,15 @@ const Todoitem = ({
                 src="https://img.icons8.com/3d-fluency/94/null/save.png"
                 alt="Save"
                 width={30}
-                className=""
+                className="me-1"
               />
               Save!
             </button>
           </div>
-          <div className="p-1 mx-4 mb-1 editTitleInput">
+          <div className="p-1 mx-4 mb-3 editTitleInput">
             <input
               maxlength="50"
-              className={` p-2 mb-0 h5`}
+              className={`text p-1 mb-0`}
               required
               value={todo.title}
               placeholder="No Title"
