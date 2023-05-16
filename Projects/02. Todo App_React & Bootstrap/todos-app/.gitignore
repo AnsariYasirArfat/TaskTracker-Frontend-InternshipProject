@@ -24,4 +24,4 @@ yarn-error.log*
 
 
 # Image Assets folder
-/src/assets
+src/assets
