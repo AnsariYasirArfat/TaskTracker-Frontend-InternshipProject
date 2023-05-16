@@ -43,6 +43,8 @@ input[type="checkbox"]:checked {
   font-size: 1.1rem;
   color: #c8f1eb;
   width: 90%;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 .taskDescSection {
@@ -52,17 +54,14 @@ input[type="checkbox"]:checked {
 }
 
 .taskDesc {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
   color: #082837;
   height: 75%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
+  overflow: auto;
 }
 .taskDesc:hover {
   -webkit-line-clamp: initial;
-  overflow: auto;
 }
 
 .editTitleInput {
@@ -70,6 +69,9 @@ input[type="checkbox"]:checked {
   border-radius: 10px;
 }
 .editTitleInput input {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   color: #c8f1eb;
   border: dashed #c8f1eb 2px;
   width: 100%;
@@ -85,6 +87,8 @@ input[type="checkbox"]:checked {
   background-color: #082837;
 }
 .editDescInput {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
   color: #c8f1eb;
   resize: none;
   width: 100%;
@@ -96,6 +100,7 @@ input[type="checkbox"]:checked {
 .dateTime {
   color: #447ca4;
   font-weight: 600;
+  font-size: 0.7rem;
 }
 
 .taskChecked {
@@ -106,11 +111,15 @@ input[type="checkbox"]:checked {
 .editDeleteButton:hover {
   background-color: #447ca4;
 }
+.editDeleteButton {
+  font-weight: 900;
+}
 
 /* Scrollbar styling */
 .taskDesc::-webkit-scrollbar,
 .editDescInput::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 .taskDesc::-webkit-scrollbar-track,
