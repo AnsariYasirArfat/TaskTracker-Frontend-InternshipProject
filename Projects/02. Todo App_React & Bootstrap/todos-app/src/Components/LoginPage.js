@@ -22,8 +22,6 @@ const LoginPage = ({ onLogin }) => {
       });
 
       const { token } = response.data;
-      console.log(response.data);
-      localStorage.setItem("token", token);
 
       // Call the onLogin function passed as a prop with the token
       onLogin(token);

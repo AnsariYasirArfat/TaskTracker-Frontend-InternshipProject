@@ -140,9 +140,10 @@ function App() {
                   title="TaskTracker"
                   filterText={filterText}
                   onFilterTextChange={setFilterText}
+                  showSearch={true}
+                  handleLogout={handleLogout}
                 />
                 <AddTodo addTodo={addTodo} />
-                <button onClick={handleLogout}>Logout</button>
                 <Todos
                   todos={todos}
                   onDelete={onDelete}
