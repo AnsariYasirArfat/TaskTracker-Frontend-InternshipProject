@@ -9,11 +9,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./CSS/App.css";
 
-import Header from "./Mycomponents/Header";
-import Footer from "./Mycomponents/Footer";
-import Todos from "./Mycomponents/Todos";
-import AddTodo from "./Mycomponents/AddTodo";
-import LoginPage from "./Mycomponents/LoginPage";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Todos from "./Components/Todos";
+import AddTodo from "./Components/AddTodo";
+import LoginPage from "./Components/LoginPage";
 
 function App() {
   // For Login & Signup
